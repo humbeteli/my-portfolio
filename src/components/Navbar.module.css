@@ -6,7 +6,7 @@
   width: min(100% - 32px, 1120px);
   margin: 16px auto 0;
 
-  background: color-mix(in srgb, var(--bg) 76%, transparent);
+  background: rgba(245, 245, 242, 0.76);
   border: 1px solid color-mix(in srgb, var(--border) 85%, transparent);
   border-radius: 16px;
 
@@ -16,6 +16,10 @@
   transition:
     background-color var(--transition),
     border-color var(--transition);
+}
+
+html[data-theme="dark"] .navbar {
+  background: rgba(17, 18, 20, 0.76);
 }
 
 .container {
