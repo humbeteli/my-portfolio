@@ -105,7 +105,7 @@ export const projects: Project[] = [
       "Loading state",
       "Pagination",
     ],
-    githubUrl: "#",
-    liveUrl: "#",
+    githubUrl: "https://github.com/humbeteli/omdb-movie-search",
+    liveUrl: "https://omdb-movie-search-henna.vercel.app/",
   },
 ];

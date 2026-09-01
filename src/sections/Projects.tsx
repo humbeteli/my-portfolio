@@ -18,7 +18,7 @@ export const Projects: React.FC = () => {
 
           <div>
             <p className={styles.eyebrow}>
-              {language === "az" ? "Seçilmiş işlər" : "Selected work"}
+              {language === "az" ? "Seçİlmİş İşlər" : "Selected work"}
             </p>
 
             <h2 className={styles.title}>
