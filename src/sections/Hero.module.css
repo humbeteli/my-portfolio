@@ -1,0 +1,154 @@
+.hero {
+  min-height: calc(100vh - 100px);
+
+  display: flex;
+  align-items: center;
+
+  padding: 100px 0 120px;
+}
+
+.container {
+  width: min(100% - 48px, var(--max-width));
+  margin: 0 auto;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.75fr);
+  gap: 90px;
+
+  align-items: center;
+}
+
+.left {
+  max-width: 760px;
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 28px;
+
+  color: var(--text-secondary);
+
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+.title {
+  max-width: 720px;
+
+  margin: 0;
+
+  color: var(--text);
+
+  font-size: clamp(46px, 6vw, 76px);
+  font-weight: 650;
+  line-height: 1.02;
+  letter-spacing: -0.055em;
+}
+
+.right {
+  width: 100%;
+  max-width: 390px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.description {
+  margin: 0;
+
+  color: var(--text-secondary);
+
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  margin-top: 30px;
+}
+
+.github {
+  width: fit-content;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 24px;
+
+  color: var(--text-secondary);
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition:
+    color var(--transition),
+    transform var(--transition);
+}
+
+.github:hover {
+  color: var(--text);
+  transform: translateX(3px);
+}
+
+.github svg {
+  width: 17px;
+  height: 17px;
+}
+
+@media (max-width: 900px) {
+  .content {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .left {
+    max-width: 700px;
+  }
+
+  .right {
+    max-width: 560px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: auto;
+    padding: 80px 0 90px;
+  }
+
+  .container {
+    width: min(100% - 32px, var(--max-width));
+  }
+
+  .title {
+    font-size: clamp(42px, 12vw, 58px);
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .actions {
+    width: 100%;
+  }
+}

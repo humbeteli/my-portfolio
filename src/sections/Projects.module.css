@@ -1,0 +1,179 @@
+.projects {
+  border-top: 1px solid var(--border);
+}
+
+.headingRow {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 40px;
+
+  margin-bottom: 70px;
+}
+
+.number {
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.eyebrow {
+  margin-bottom: 12px;
+
+  color: var(--accent);
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0;
+
+  color: var(--text);
+
+  font-size: clamp(40px, 5vw, 62px);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.projectsList {
+  border-top: 1px solid var(--border);
+}
+
+.project {
+  padding: 34px 0;
+
+  border-bottom: 1px solid var(--border);
+
+  transition: padding var(--transition);
+}
+
+.project:hover {
+  padding-left: 12px;
+}
+
+.projectTop {
+  display: grid;
+  grid-template-columns: 70px 1fr auto;
+  gap: 20px;
+  align-items: center;
+}
+
+.projectNumber {
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.projectTitle {
+  margin: 0;
+
+  color: var(--text);
+
+  font-size: clamp(25px, 3vw, 38px);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+}
+
+.projectArrow {
+  color: var(--text-muted);
+  font-size: 25px;
+
+  transition:
+    color var(--transition),
+    transform var(--transition);
+}
+
+.project:hover .projectArrow {
+  color: var(--accent);
+  transform: translate(4px, -4px);
+}
+
+.projectBody {
+  margin-left: 90px;
+  margin-top: 18px;
+  max-width: 850px;
+}
+
+.description {
+  max-width: 650px;
+
+  color: var(--text-secondary);
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  gap: 30px;
+
+  margin-top: 24px;
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.technologies span {
+  padding: 5px 9px;
+
+  color: var(--text-secondary);
+
+  border: 1px solid var(--border);
+  border-radius: 6px;
+
+  font-size: 12px;
+}
+
+.links {
+  display: flex;
+  gap: 18px;
+  flex-shrink: 0;
+}
+
+.links a {
+  color: var(--text-secondary);
+
+  font-size: 13px;
+  font-weight: 600;
+
+  transition: color var(--transition);
+}
+
+.links a:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 700px) {
+  .headingRow {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .projectTop {
+    grid-template-columns: 40px 1fr auto;
+    gap: 12px;
+  }
+
+  .projectBody {
+    margin-left: 52px;
+  }
+
+  .bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .links {
+    margin-top: 4px;
+  }
+}

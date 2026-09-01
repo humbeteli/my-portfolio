@@ -1,0 +1,166 @@
+.navbar {
+  position: sticky;
+  top: 16px;
+  z-index: var(--z-navbar);
+
+  width: min(100% - 32px, 1120px);
+  margin: 16px auto 0;
+
+  background: color-mix(in srgb, var(--bg) 76%, transparent);
+  border: 1px solid color-mix(in srgb, var(--border) 85%, transparent);
+  border-radius: 16px;
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  transition:
+    background-color var(--transition),
+    border-color var(--transition);
+}
+
+.container {
+  min-height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 18px;
+  gap: 24px;
+}
+
+.logo {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 48px;
+  height: auto;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+}
+
+.navLink {
+  padding: 6px 0;
+
+  background: transparent;
+  color: var(--text-secondary);
+
+  font-size: 14px;
+  font-weight: 500;
+
+  transition: color var(--transition);
+}
+
+.navLink:hover {
+  color: var(--text);
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.divider {
+  width: 1px;
+  height: 22px;
+  background: var(--border);
+}
+
+.hamburger {
+  display: none;
+
+  width: 40px;
+  height: 40px;
+
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.line {
+  width: 17px;
+  height: 1.5px;
+  background: var(--text);
+  border-radius: 2px;
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    top: 10px;
+    margin-top: 10px;
+  }
+
+  .container {
+    min-height: 58px;
+  }
+
+  .logo img {
+    width: 42px;
+  }
+
+  .hamburger {
+    display: flex;
+    margin-left: auto;
+  }
+
+  .navLinks {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+
+    padding: 8px;
+
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+
+    transition:
+      opacity var(--transition),
+      transform var(--transition),
+      visibility var(--transition);
+  }
+
+  .navLinks.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .navLink {
+    padding: 12px;
+    text-align: left;
+    border-radius: 8px;
+  }
+
+  .navLink:hover {
+    background: var(--surface-hover);
+  }
+
+  .controls {
+    margin-left: 0;
+  }
+}
