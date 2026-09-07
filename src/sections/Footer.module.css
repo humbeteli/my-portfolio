@@ -1,78 +1,86 @@
 .footer {
   margin-top: 40px;
-
   border-top: 1px solid var(--border);
 }
 
 .container {
   width: min(100% - 48px, var(--max-width));
   margin: 0 auto;
-
   padding: 55px 0 32px;
 }
 
 .top {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
-
   gap: 40px;
-
   padding-bottom: 70px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
 }
 
 .name {
   margin: 0;
-
   color: var(--text);
-
   font-size: 14px;
   font-weight: 700;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
 }
 
 .role {
-  margin-top: 6px;
-
+  margin: 6px 0 0;
   color: var(--text-muted);
-
   font-size: 13px;
 }
 
 .links {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 22px;
 }
 
 .links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--text-secondary);
-
-  font-size: 13px;
-  font-weight: 500;
-
-  transition: color var(--transition);
+  transition:
+    color var(--transition),
+    transform var(--transition);
 }
 
 .links a:hover {
   color: var(--text);
+  transform: translateY(-2px);
+}
+
+.links svg {
+  width: 19px;
+  height: 19px;
+  fill: currentColor;
 }
 
 .bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   padding-top: 22px;
-
   border-top: 1px solid var(--border);
 }
 
 .bottom p {
   margin: 0;
-
   color: var(--text-muted);
-
   font-size: 12px;
 }
 
@@ -83,14 +91,13 @@
   }
 
   .top {
+    align-items: flex-start;
     flex-direction: column;
-
     padding-bottom: 45px;
   }
 
   .links {
-    flex-wrap: wrap;
-    gap: 16px 22px;
+    gap: 20px;
   }
 
   .bottom {

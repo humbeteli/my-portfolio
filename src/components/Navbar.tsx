@@ -33,7 +33,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavClick }) => {
     <nav className={styles.navbar}>
       <div className={styles.container}>
         <div className={styles.logo}>
-          <img src={theme === "light" ? loqoLight : loqo} alt="Logo" />
+          <button
+            className={styles.logoButton}
+            onClick={() => onNavClick("hero")}
+            aria-label="Go to home"
+          >
+            <img
+              src={theme === "light" ? loqoLight : loqo}
+              alt="Hümbətəli Qurbanov"
+              className={styles.logo}
+            />
+          </button>
         </div>
 
         <button
