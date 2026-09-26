@@ -46,17 +46,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavClick }) => {
           </button>
         </div>
 
-        <button
-          className={styles.hamburger}
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          aria-label="Toggle menu"
-          aria-expanded={isMenuOpen}
-        >
-          <span className={styles.line} />
-          <span className={styles.line} />
-          <span className={styles.line} />
-        </button>
-
         <div className={`${styles.navLinks} ${isMenuOpen ? styles.open : ""}`}>
           {navItems.map((item) => (
             <button
@@ -74,6 +63,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavClick }) => {
           <div className={styles.divider} />
           <ThemeToggle />
         </div>
+
+        <button
+          className={styles.hamburger}
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle menu"
+          aria-expanded={isMenuOpen}
+        >
+          <span className={styles.line} />
+          <span className={styles.line} />
+          <span className={styles.line} />
+        </button>
       </div>
     </nav>
   );

@@ -45,7 +45,7 @@ export const Hero: React.FC = () => {
 
               <Button
                 variant="secondary"
-                href="/Humbatali-Gurbanov_CV.pdf"
+                href="/Humbatali_Gurbanov_Frontend_CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
               >

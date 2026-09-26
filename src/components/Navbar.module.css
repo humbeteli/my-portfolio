@@ -127,7 +127,6 @@ html[data-theme="dark"] .navbar {
 
   .hamburger {
     display: flex;
-    margin-left: auto;
   }
 
   .navLinks {
@@ -174,6 +173,7 @@ html[data-theme="dark"] .navbar {
   }
 
   .controls {
-    margin-left: 0;
+    display: flex;
+    margin-left: 100px;
   }
 }
